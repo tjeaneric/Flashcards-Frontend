@@ -1,3 +1,62 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+/* .center-text {
+  position: absolute;
+  top: 48.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
+
+/* HEADER */
+
+header {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* CARD */
+
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 40rem;
+}
+
+.card__side {
+  height: 40rem;
+  width: 50rem;
+  color: #000;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: -25rem;
+  backface-visibility: hidden;
+  transition: all 0.8s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card__side--front {
+}
+.card__side--back {
+  transform: rotateY(180deg);
+}
+
+.card:hover .card__side--front {
+  transform: rotateY(180deg);
+}
+.card:hover .card__side--back {
+  transform: rotateY(0);
+}
