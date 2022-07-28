@@ -10,7 +10,7 @@ const MainNavigation: NextPage = () => {
         </div>
         <nav>
           <div className="flex items-center justify-between space-x-6">
-            <div className="capitalize rounded-full text-xl bg-brightRed p-3 px-6 py-2 text-white hover:bg-brightRedLight ">
+            <div className="capitalize font-semibold rounded-full text-xl bg-brightRed p-3 px-10 py-2 text-white hover:bg-brightRedLight ">
               <Link href="/login">login </Link>
             </div>
           </div>

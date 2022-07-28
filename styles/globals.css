@@ -60,3 +60,77 @@ header {
 .card:hover .card__side--back {
   transform: rotateY(0);
 }
+
+/* LOGIN FORM */
+
+/* LOGIN FORM */
+
+.login {
+  width: 30rem;
+  height: 35rem;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 10rem;
+
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.login-input {
+  padding: 1rem;
+  padding-right: 4rem;
+  margin-bottom: 3rem;
+  border: 1px solid #cacaca;
+  border-radius: 0.5rem;
+}
+
+.login-input:focus {
+  outline: none;
+}
+
+.login-btn {
+  display: inline-block;
+  padding: 0.8rem 8rem;
+  margin-bottom: 3rem;
+  color: #fff;
+}
+
+.login-p {
+  font-size: 1.6rem;
+  margin-bottom: 2.5rem;
+}
+
+/* REGISTER FORM */
+
+.register {
+  width: 30rem;
+  height: 45rem;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 6rem;
+
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.register-input {
+  padding: 1rem;
+  padding-right: 4rem;
+  margin-bottom: 2.5rem;
+  border: 1px solid #cacaca;
+  border-radius: 0.5rem;
+}

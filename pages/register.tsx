@@ -1,22 +1,35 @@
 import type { NextPage } from "next";
 import Link from "next/link";
 
-const Login: NextPage = () => {
+const Register: NextPage = () => {
   return (
     <form action="#" method="POST">
-      <div className="login ">
+      <div className="register ">
         <div className="pt-10">
-          <p className="text-3xl font-semibold text-brightOrange">Login</p>
+          <p className="text-3xl font-semibold text-brightOrange">Register</p>
           <input
-            className="login-input mt-16"
+            className="register-input mt-14"
+            type="firstName"
+            name="firstName"
+            placeholder="first name"
+            required
+          />
+          <input
+            className="register-input"
+            type="lastName"
+            name="lastName"
+            placeholder="last name"
+            required
+          />
+          <input
+            className="register-input"
             type="email"
             name="email"
             placeholder="Email or Phone number"
             required
           />
-
           <input
-            className="login-input"
+            className="register-input"
             type="password"
             name="password"
             placeholder="Password"
@@ -26,12 +39,12 @@ const Login: NextPage = () => {
             type="submit"
             className="btn login-btn font-semibold bg-brightRed hover:bg-brightOrange rounded-full"
           >
-            Login
+            Register
           </button>
           <div className="text-xl">
-            <p>Don&apos;t have an account?</p>
+            <p>Already have account?</p>
             <div className="underline font-bold text-brightRed">
-              <Link href="./register"> Register</Link>
+              <Link href="./login">Login</Link>
             </div>
           </div>
         </div>
@@ -40,4 +53,4 @@ const Login: NextPage = () => {
   );
 };
 
-export default Login;
+export default Register;
