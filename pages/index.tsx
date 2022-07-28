@@ -1,19 +1,12 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
+import { useQuery, gql } from "@apollo/client";
 import { CardItem } from "../components/cards/CardItem";
 
-export const getStaticProps = async () => {
-  const client = new ApolloClient({
-    uri: "https://flashcards-graphql-api.herokuapp.com/graphql",
-    cache: new InMemoryCache(),
-  });
+const skip: number = 1;
 
-  let skip: number = 0;
-
-  const { data } = await client.query({
-    query: gql`
-      {
+const cardData = gql`
+     query {
         cards(take: 1, skip: ${skip}) {
           cards {
             id
@@ -22,17 +15,13 @@ export const getStaticProps = async () => {
           }
         }
       }
-    `,
-  });
+    `;
 
-  return {
-    props: {
-      cards: data.cards.cards,
-    },
-  };
-};
+const Home: NextPage = () => {
+  const { data, loading, error } = useQuery(cardData);
 
-const Home: NextPage = ({ cards }: any) => {
+  if (error) return <p>Oh no... {error.message}</p>;
+
   return (
     <div>
       <Head>
@@ -41,7 +30,7 @@ const Home: NextPage = ({ cards }: any) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <CardItem cards={cards} />
+      {loading ? <p>Loading...</p> : <CardItem cards={data.cards.cards} />}
     </div>
   );
 };
