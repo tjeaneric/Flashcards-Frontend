@@ -7,11 +7,6 @@ type Props = {
 
 const AuthContextProvider = ({ children }: Props) => {
   const [token, setToken] = useState(null);
-  useEffect(() => {
-    const initialToken: any = localStorage.getItem("token");
-    setToken(initialToken);
-  }, []);
-
   // !! converts a truth or falsy value to a boolean i.e true or false boolean values
   const userIsLoggedIn = !!token;
 
