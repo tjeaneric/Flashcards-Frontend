@@ -2,5 +2,5 @@
 
 #### Stack:
 
-- Tailwind css
-- Nextjs
+- TailwindCss
+- Nextjs and Typescript

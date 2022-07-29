@@ -134,3 +134,7 @@ header {
   border: 1px solid #cacaca;
   border-radius: 0.5rem;
 }
+
+.register-input:focus {
+  outline: none;
+}
