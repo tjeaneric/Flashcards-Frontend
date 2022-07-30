@@ -35,7 +35,7 @@ const Login: NextPage = () => {
   });
   if (data) {
     const { login } = data;
-    authCtx.login(login.token);
+    authCtx.login(login?.token);
   }
 
   const onSubmit = async (data: any) => {

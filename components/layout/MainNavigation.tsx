@@ -20,6 +20,9 @@ const MainNavigation: NextPage = () => {
             {isLoggedIn && (
               <>
                 <div className="capitalize font-semibold rounded-md text-xl bg-brightRed p-3 px-10 py-2 text-white hover:bg-brightRedLight ">
+                  <Link href="/all-links">All cards</Link>
+                </div>
+                <div className="capitalize font-semibold rounded-md text-xl bg-brightRed p-3 px-10 py-2 text-white hover:bg-brightRedLight ">
                   <Link href="/create-card">Create cards</Link>
                 </div>
                 <div

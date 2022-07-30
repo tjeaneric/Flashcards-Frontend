@@ -5,7 +5,6 @@ import AuthContext from "../store/auth-context";
 import { gql, useMutation } from "@apollo/client";
 import toast, { Toaster } from "react-hot-toast";
 import { useForm } from "react-hook-form";
-import Link from "next/link";
 
 const CreateCardMutation = gql`
   mutation ($name: String!, $description: String!) {
